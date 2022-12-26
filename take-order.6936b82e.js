@@ -1,0 +1,2 @@
+("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequired7c6.register("iYFef",(function(e,n){const o=document.querySelector(".selected"),t=document.querySelector(".options-container"),i=document.querySelectorAll(".option");o.addEventListener("click",(()=>{t.classList.toggle("active")})),i.forEach((e=>{e.addEventListener("click",(()=>{o.innerHTML=e.querySelector("label").innerHTML,t.classList.remove("active")}))}))}));
+//# sourceMappingURL=take-order.6936b82e.js.map

@@ -1,0 +1,2 @@
+("undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"undefined"!=typeof window?window:"undefined"!=typeof global?global:{}).parcelRequired7c6.register("4PbEM",(function(A,e){(async()=>{const A=await new Promise((A=>{const e=new Image;e.src="data:image/webp;base64,UklGRkAAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAIAAAAAAFZQOCAYAAAAMAEAnQEqAQABAAFAJiWkAANwAP79NmgA",e.onerror=e=>A(!1),e.onload=e=>A(!0)}));console.log("this browser supports webp images:",A),A||document.body.classList.add("no-webp")})()}));
+//# sourceMappingURL=checkWebpSupport.93c040d5.js.map
