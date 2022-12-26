@@ -1,0 +1,21 @@
+// Тут будуть змінні у форматі SASS
+// Приклад оголошення: $defaultPadding: 20px
+
+// * breakpoints
+$mobileBreakpoint: 480px;
+$tabletBreakpoint: 768px;
+$desktopBreakpoint: 1280px;
+
+// * container padding
+$containerPaddingDefault: 40px;
+$containerPaddingBig: 80px;
+$containerPaddingSmall: 16px;
+
+/* колір текста основний  #FFFFF*/
+/* колір текста вторинний #8D9289*/
+/* колір текста акцентний #212121 */
+$primaryTextColor: #ffffff;
+$secondaryTextColor: #8d9289;
+$accentTextColor: #86e543;
+/* колір фона основний  */
+$backgroundColor: #01383a;

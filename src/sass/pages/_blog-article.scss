@@ -1,0 +1,222 @@
+.page-name-article {
+    color: white;
+    
+@media screen and (max-width:480px) {
+   
+    @include font(500, 24px, 1.16);
+    margin: 40px 16px 24px 16px;
+}
+    @include media-mobile{
+    @include font(500, 24px, 1.16);
+    margin-top: 40px;
+    margin-bottom: 24px;
+    margin: 40px 16px 24px 16px;
+
+    }
+
+    @include media-tablet {
+        @include font(500, 56px, 1.2);
+        margin: 120px 40px 24px 40px;
+        
+    }
+
+    @include media-desktop {
+        @include font(500, 56px, 1.2);
+        margin-left: 40px;
+        margin-bottom: 75px;
+    }
+}
+.article-picture-mobile {
+    margin-top: 31px;
+@include media-mobile{
+    display: block;
+}
+
+@include media-tablet{
+display: none;
+}
+}
+
+.blog-writer-article {
+    
+    display: block;
+    @media screen and (max-width: 480px) {
+        @include font(500, 16px, 1.16);
+            color: white;
+            margin-top: 20px;
+    }
+    @include media-mobile{
+    @include font(500, 16px, 1.16);
+    color: white;
+    margin-top:20px;
+    }
+    @include media-tablet {
+        @include font(500, 24px, 1);
+        color: #86E543;
+        margin-bottom: 32px;
+        width: 134px;
+    }
+
+    @include media-desktop {
+        @include font(500, 24px, 1);
+        // margin-bottom: 0px;
+        margin: 0;
+        padding: 0;
+        width: 248px;
+    }
+}
+.blog-updated-article {
+    color: white;
+    display: block;
+    @include font(400, 16px, 1.16);
+    margin-top: 8px;
+     margin-bottom: 8px;
+    color: $secondaryTextColor;
+
+    @include media-tablet {
+        @include font(500, 24px, 1);
+        margin-bottom: 0px;
+    }
+
+    @include media-desktop {
+        @include font(500, 24px, 1);
+        margin-left: 97px;
+        margin-top: 0px;
+        padding: 0px;
+        align-items: center;
+    }
+}
+.blog-text-article{
+margin: auto;
+padding: 0 16px;
+color: white;
+display: inline-block;
+
+@include media-mobile{
+    @include font(400, 16px, 1.187);
+    margin-top: 8px;
+    margin-bottom: 48px;
+}
+    @include media-tablet {
+        @include font(400, 24px, 1.16);
+        margin-bottom: 120px;
+        padding: 0 40px;
+    }
+
+    @include media-desktop {
+        @include font(400, 24px, 1.16);
+        margin-bottom: 20px;
+        width: 100%;
+    }
+}
+ol{
+    @media screen and (max-width:480px) {
+        padding: 0 20px;
+            margin: 0px;
+    }
+    @include media-mobile{
+    padding: 0 20px;
+    margin: 0px;
+    }
+        @include media-tablet {
+            padding: 0 40px;
+            margin: 0px;
+        }
+    
+}
+.article-text-author {
+
+    @media screen and (max-width:480px) {
+        margin-left: 16px;
+    }
+    @include media-mobile {
+        margin-left: 16px;
+    }
+    @include media-tablet{
+        display: none;
+    }
+}
+
+.article-container-tablet {
+    margin-bottom: 0px;
+@media screen and (max-width: 480px) {
+    display: none;
+    
+}
+    @include media-mobile {
+    display: none;
+}
+    @include media-tablet {
+        display: flex;
+        align-items: flex-end;
+        gap: 40px;
+        margin-bottom: 16px;
+        padding: 0 40px;
+    }
+    @include media-desktop{
+        display: flex;
+        gap: unset;
+        margin-bottom: 0px;
+    }
+}
+.article-picture {
+    @media screen and (max-width:480px) {
+        display: none;
+        
+        
+    }
+    @include media-mobile {
+            display: none;
+        }
+        @include media-tablet {
+    display: block;
+    
+    border-radius: 12px;
+}
+    @include media-desktop {
+        display: block;
+    }
+}
+ .green-text {
+    @include media-tablet{
+    color: #86E543;
+ }
+}
+.radius {
+    border-radius: 12px;
+}
+.blog-content-article {
+    @include media-tablet {
+        display: block;
+        width: 248px;
+    }
+
+    @include media-desktop {
+        display: none;
+    }
+}
+
+.desktop-text-article{
+    @media screen and (max-width:1279px) {
+        display: none;
+    }
+
+    @include media-desktop {
+        color: white;
+    @include font(400, 24px, 1.16);
+    width: 699px;
+    
+    margin-left: 121px;
+    }
+}
+.desktop-content-article{
+    display: flex;
+    align-items: center;
+    // margin-bottom: 34px;
+}
+
+.display-none {
+    @include media-desktop{
+    display: none;
+    }
+}

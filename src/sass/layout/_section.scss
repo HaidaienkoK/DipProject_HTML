@@ -1,0 +1,7 @@
+.section {
+  margin-bottom: 48px;
+
+  @include media-tablet() {
+    margin-bottom: 120px;
+  }
+}

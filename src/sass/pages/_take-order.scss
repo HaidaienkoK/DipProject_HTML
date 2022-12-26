@@ -1,0 +1,517 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  // background-image: url(../images/take-order/bg_mob.jpg);
+  border: 0;
+  margin: 0;
+
+  @include media-tablet {
+    background-image: url(../images/take-order/bg_tab.jpg);
+  }
+
+  @include media-desktop {
+    background-image: url(../images/take-order/bg_desktop.jpg);
+  }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.to-main {
+  padding-top: 40px;
+}
+// ! Подивитися, бо маємо загальні точки перелому у 480px для мобільного
+.container-take-order {
+  width: 100%;
+  padding: 0 16px;
+  padding-top: 40px;
+  margin: 0 auto;
+
+  @include media-mobile {
+    width: 480px;
+  }
+  @include media-tablet {
+    width: 768px;
+    padding: 0 40px;
+    padding-top: 120px;
+  }
+  @include media-desktop {
+    width: 1280px;
+  }
+}
+
+.to-title {
+  @include font(600, 24px, 1.16);
+  color: $primaryTextColor;
+
+  @include media-tablet {
+    margin-left: 83px;
+    @include font(500, 56px, 1.16);
+  }
+}
+
+@include media-desktop {
+  .to-product-info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
+
+.to-name {
+  display: block;
+  margin-bottom: 16px;
+  @include font(600, 32px, 1.19);
+  color: $primaryTextColor;
+
+  @include media-tablet {
+    margin-bottom: 24px;
+    @include font(600, 56px, 1.18);
+  }
+
+  @include media-desktop {
+    margin-bottom: 32px;
+  }
+}
+
+.product {
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+  }
+}
+
+.to-image-main {
+  margin-bottom: 16px;
+  width: 100%;
+
+  @include media-tablet {
+    margin-bottom: 0;
+    width: 387px;
+    height: 346px;
+  }
+
+  @include media-desktop {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.to-img-main {
+  // width: 100%;
+  // height: 354px;
+  border-radius: 12px;
+
+  @include media-tablet {
+    min-width: 387px;
+    min-height: 346px;
+  }
+}
+
+.to-price {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 16px;
+
+  @include media-tablet {
+    display: block;
+    padding-left: 40px;
+    margin-bottom: 0;
+  }
+
+  @include media-desktop {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+
+.to-sale-price {
+  @include font(600, 16px, 1);
+  text-decoration-line: line-through;
+  color: #8d9289;
+
+  @include media-tablet {
+    margin-bottom: 46px;
+    font-size: 24px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+}
+
+.to-discount-price {
+  @include font(600, 32px, 1);
+  color: $accentTextColor;
+
+  @include media-tablet {
+    font-size: 48px;
+  }
+
+  @include media-desktop {
+    margin-right: 320px;
+  }
+}
+
+.to-images {
+  width: 100%;
+}
+
+.to-images-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  gap: 16px;
+  width: auto;
+  margin-bottom: 32px;
+
+  @include media-tablet {
+    height: 160px;
+    margin-bottom: 48px;
+    gap: 24px;
+  }
+  @include media-desktop {
+    margin-left: 500px;
+  }
+}
+
+.to-image-img {
+  border-radius: 6px;
+  @include media-tablet {
+    height: 160px;
+    width: 154px;
+  }
+}
+
+.to-contact {
+  width: 100%;
+
+  @include media-tablet {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  @include media-desktop {
+    display: block;
+  }
+}
+
+.to-contact-title {
+  width: 100%;
+  @include font(600, 24px, 1.17);
+  color: $accentTextColor;
+  margin-bottom: 16px;
+
+  @include media-tablet {
+    font-size: 36px;
+    padding-left: 49px;
+  }
+
+  @include media-desktop {
+    padding-left: 0;
+  }
+}
+
+.to-form {
+  display: block;
+  width: 100%;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input,
+input:valid {
+  border-color: $accentTextColor;
+}
+
+.to-form-full {
+  @include media-desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.to-form-field {
+  position: relative;
+  margin-bottom: 40px;
+
+  @include media-tablet {
+    width: 100%;
+  }
+  @include media-desktop {
+    width: 590px;
+  }
+}
+
+.to-form-input {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid $accentTextColor;
+  background-color: transparent;
+  width: 100%;
+  height: 24px;
+  @include font(400, 16px, 1.25);
+  color: $primaryTextColor;
+
+  @include media-tablet {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+}
+
+.to-form-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  @include font(400, 16px, 1.25);
+  color: $primaryTextColor;
+
+  @include media-tablet {
+    font-size: 18px;
+    line-height: 1.1;
+  }
+}
+
+// .to-form-input::placeholder {
+//   color: $primaryТextСolor;
+// }
+
+.to-form-input:focus {
+  outline: inherit;
+}
+
+.to-form-input:focus + .to-form-label,
+.to-form-input:not(:placeholder-shown) + .to-form-label {
+  transform: translateY(-30px);
+  font-size: 12px;
+}
+
+// Новый селектор для выбора
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: #01383a;
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected {
+  background: #01383a;
+  width: 100%;
+  height: 24px;
+  margin-bottom: 40px;
+  color: $primaryTextColor;
+  @include font(400, 16px, 1.25);
+  position: relative;
+  order: 0;
+  border-bottom: 1px solid $accentTextColor;
+
+  @include media-tablet {
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+}
+
+.selected::after {
+  content: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='14' height='10' fill='none'><path fill='%23fff' d='M7.781 9.023a1 1 0 0 1-1.562 0L.504 1.874A1 1 0 0 1 1.285.25h11.43a1 1 0 0 1 .78 1.624L7.782 9.023Z'/></svg>");
+  // background: url('/src/images/take-order/polygon.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 18px;
+  height: 13px;
+  right: 10px;
+  top: 5px;
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active + .selected {
+  margin-bottom: 0;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+  border-bottom: 1px solid $accentTextColor;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform-origin: center center;
+  transform: rotateX(180deg);
+  // transform: translateY(-30px);
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 1px;
+  background: #01383a;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: #01383a;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: #17573d;
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+// Конец нового селектора
+
+.comment {
+  @include font(400, 16px, 1.25);
+  text-transform: capitalize;
+  background-color: transparent;
+  color: $primaryTextColor;
+
+  @include media-desktop {
+    margin-left: 20px;
+  }
+}
+
+.to-form-textarea {
+  padding: 0;
+  width: 100%;
+  height: 95px;
+  margin-bottom: 24px;
+  color: $primaryTextColor;
+  border: 1px solid $accentTextColor;
+  background-color: transparent;
+  border-radius: 0px;
+
+  @include media-tablet {
+    height: 256px;
+  }
+
+  @include media-desktop {
+    width: 589px;
+    margin-bottom: 48px;
+    margin-left: 20px;
+  }
+}
+
+.to-form-textarea:focus {
+  outline: inherit;
+}
+
+.to-form-btn-grp {
+  @include media-desktop {
+    display: flex;
+    margin-bottom: 120px;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+.to-form-btn {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  @include font(700, 16px, 1.19);
+  text-align: center;
+  text-transform: uppercase;
+  border: 1px solid $accentTextColor;
+  border-radius: 16px;
+  cursor: pointer;
+
+  @include media-tablet {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+
+  @include media-desktop {
+    margin: 0;
+  }
+}
+
+.to-form-btn-buy {
+  margin-bottom: 16px;
+  color: #01383a;
+  background: $accentTextColor;
+  padding: 16px 42px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include media-tablet {
+    padding: 16px 64px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+    padding: 16px 64px;
+  }
+}
+
+.to-form-btn-buy:hover,
+.to-form-btn-buy:focus {
+  box-shadow: 0px 8px 20px rgba(134, 229, 67, 0.5),
+    0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.to-form-btn-add {
+  margin-bottom: 48px;
+  background-color: transparent;
+  color: $accentTextColor;
+  padding: 16px 36px;
+  transition: box-shadow 100ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include media-tablet {
+    padding: 16px 52px;
+    margin-bottom: 120px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 0;
+  }
+}
+
+.to-form-btn-add:hover,
+.to-form-btn-add:focus {
+  filter: drop-shadow(0px 4px 10px rgba(134, 229, 67, 0.1))
+    drop-shadow(0px 4px 20px rgba(134, 229, 67, 0.4));
+}

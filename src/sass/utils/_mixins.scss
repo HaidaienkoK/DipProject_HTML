@@ -1,0 +1,23 @@
+@mixin media-mobile() {
+  @media screen and (min-width: $mobileBreakpoint) {
+    @content;
+  }
+}
+
+@mixin media-tablet() {
+  @media screen and (min-width: $tabletBreakpoint) {
+    @content;
+  }
+}
+
+@mixin media-desktop() {
+  @media screen and (min-width: $desktopBreakpoint) {
+    @content;
+  }
+}
+
+@mixin font($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}

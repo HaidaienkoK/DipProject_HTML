@@ -1,0 +1,15 @@
+body {
+  font-family: 'Roboto', sans-serif;
+
+  background-color: $backgroundColor;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

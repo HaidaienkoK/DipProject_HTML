@@ -1,0 +1,250 @@
+.section-hero {
+  max-width: 1400px;
+  margin-top: -104px;
+  margin-inline: auto;
+
+  background-image: url('../images/hero/hero.webp');
+  background-repeat: no-repeat;
+  background-position: center right -80px;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url('../images/hero/hero@2x.webp');
+    background-position: center right -80px;
+  }
+
+  // * if no webp support in browser, load jpg. Check by` checkWebpSupport.js
+  // TODO: insert JPG version
+  body.no-webp & {
+    background-image: url('../images/hero/hero.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero/hero@2x.jpg');
+    }
+  }
+
+  overflow: hidden;
+
+  @include media-tablet() {
+    margin-top: -256px;
+
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.section.section-hero {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 0px;
+  }
+}
+
+.hero-bg-easel {
+  position: relative;
+}
+
+.hero-bg-container {
+  mix-blend-mode: luminosity;
+
+  pointer-events: none;
+}
+
+.hero-bg-keyboard {
+  transform: rotate(24deg);
+
+  @include media-tablet() {
+    transform: rotate(21.68deg);
+  }
+
+  @include media-desktop() {
+    transform: rotate(30deg);
+  }
+}
+
+.hero-bg-keyboard-container {
+  position: absolute;
+  bottom: 5%;
+  right: 30%;
+
+  width: 100px;
+
+  animation: floating-animation-mobile 6500ms 350ms ease-in-out infinite;
+
+  @include media-tablet() {
+    bottom: 15%;
+    right: 25%;
+
+    width: 140px;
+
+    animation: floating-animation-tablet 6500ms 350ms ease-in-out infinite;
+  }
+
+  @include media-desktop() {
+    bottom: 12%;
+    right: 35%;
+
+    width: 240px;
+
+    animation: floating-animation-desktop 6500ms 350ms ease-in-out infinite;
+  }
+}
+
+.hero-bg-headphones {
+  transform: rotate(28deg);
+
+  @include media-tablet() {
+    transform: rotate(10.77deg);
+  }
+
+  @include media-desktop() {
+    transform: rotate(18deg);
+  }
+}
+
+.hero-bg-headphones-container {
+  position: absolute;
+  top: 8%;
+  right: -5%;
+
+  width: 200px;
+
+  animation: floating-animation-mobile 6500ms 350ms ease-in-out infinite;
+
+  @include media-tablet() {
+    top: 45%;
+    right: 5%;
+
+    width: 200px;
+
+    animation: floating-animation-tablet 6500ms 350ms ease-in-out infinite;
+  }
+
+  @include media-desktop() {
+    top: 40%;
+    right: 10%;
+
+    width: 270px;
+
+    animation: floating-animation-desktop 6500ms 350ms ease-in-out infinite;
+  }
+}
+
+.hero-bg-mouse {
+  transform: rotate(-29deg);
+
+  @include media-tablet() {
+    transform: rotate(-31.92deg);
+  }
+
+  @include media-desktop() {
+    transform: rotate(-34deg);
+  }
+}
+
+.hero-bg-mouse-container {
+  position: absolute;
+  top: 22%;
+  left: 15%;
+
+  width: 80px;
+
+  animation: floating-animation-mobile 6500ms 350ms ease-in-out infinite;
+
+  @include media-tablet() {
+    top: 19%;
+    left: 60%;
+
+    width: 120px;
+
+    animation: floating-animation-tablet 6500ms 350ms ease-in-out infinite;
+  }
+
+  @include media-desktop() {
+    top: 25%;
+    left: 53%;
+
+    width: 140px;
+
+    animation: floating-animation-desktop 6500ms 350ms ease-in-out infinite;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  height: 600px;
+  padding-top: 278px;
+
+  @media screen and (max-width: 767px) {
+    align-items: center;
+  }
+
+  @include media-tablet() {
+    height: 860px;
+    padding-top: 290px;
+
+    // background-position: calc(100% + 130px) -30px;
+    background-position: center;
+    background-size: contain;
+    gap: 94px;
+  }
+
+  @include media-desktop() {
+    padding-top: 316px;
+    padding-left: 102px;
+  }
+}
+
+.hero-title {
+  width: 247px;
+
+  @include font(500, 32px, 1.18);
+  color: #ffffff;
+
+  @media screen and (max-width: 479px) {
+    max-width: 75vw;
+    padding-inline: calc(5vmin);
+
+    font-size: calc(1.25vmin * 5);
+  }
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
+  @include media-tablet() {
+    width: 388px;
+
+    font-size: 56px;
+  }
+
+  @include media-desktop() {
+    width: 436px;
+
+    font-size: 64px;
+  }
+}
+
+@mixin floating-animation($type, $maxOffset) {
+  @keyframes floating-animation-#{$type} {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY($maxOffset);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}
+
+// Example of result name: floating-animation-mobile
+@include floating-animation(mobile, -7px);
+@include floating-animation(tablet, -14px);
+@include floating-animation(desktop, -20px);

@@ -1,0 +1,105 @@
+.index-slider {
+  max-width: $desktopBreakpoint;
+  margin-inline: auto;
+}
+
+.index-slider-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include media-tablet() {
+    gap: 32px;
+  }
+}
+
+// .index-slider-list {
+// }
+
+.index-slider-item {
+  position: relative;
+}
+
+.index-slider-text {
+  max-width: 360px;
+
+  position: absolute;
+  left: 24px;
+  bottom: 38px;
+
+  @include font(500, 36px, 1.18);
+
+  @include media-tablet() {
+    left: 41px;
+    bottom: 25px;
+
+    max-width: 560px;
+
+    font-size: 56px;
+  }
+
+  @include media-desktop() {
+    left: 49px;
+    bottom: 49px;
+  }
+}
+
+.index-slider-text-gr1 {
+  background: linear-gradient(
+    270deg,
+    #1edde0 13.26%,
+    #8bda41 51.01%,
+    #ef001b 107.89%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.index-slider-text-gr2 {
+  background: linear-gradient(
+    270deg,
+    #03fe8f 23.82%,
+    #ebdcff 57.84%,
+    #ff98f3 102.62%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.index-slider-text-gr3 {
+  background: linear-gradient(
+    270deg,
+    #ffffff 27.78%,
+    #693cf9 61.11%,
+    #f475eb 102.56%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.index-slider-text-mobile {
+  @include media-mobile() {
+    display: none;
+  }
+}
+
+.index-slider-text-default {
+  display: none;
+
+  @include media-mobile() {
+    display: block;
+  }
+
+  @include media-desktop() {
+    left: 345px;
+    bottom: 49px;
+
+    max-width: 600px;
+  }
+}

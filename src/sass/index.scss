@@ -1,0 +1,16 @@
+// Головний SASS для імпортів з інших папок
+// Не чіпати
+
+// ! Modern normalize стоїть виключно на початку, щоби перебивання стилів працювало правильно
+@import '~node_modules/modern-normalize/modern-normalize.css';
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+
+// ! Змінні та база також зверху
+@import 'utils/main';
+@import 'base/main';
+
+// * Бажано також не змінювати порядок
+@import 'layout/main';
+@import 'pages/main';
+
+@import 'pages/take-order';

@@ -1,0 +1,137 @@
+.footer {
+  background-color: #001414;
+  color: #ffffff;
+  @include media-mobile() {
+    height: 401px;
+  }
+
+  @include media-tablet() {
+    height: 215px;
+  }
+
+  // @include media-desktop()
+}
+
+.footer-container {
+  padding-top: 25px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-left: 16px;
+
+  @include media-tablet() {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    padding-left: 39px;
+  }
+  @include media-desktop() {
+    padding-right: 179px;
+    padding-left: 80px;
+  }
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.16;
+  margin-bottom: 25px;
+
+  @include media-tablet() {
+    text-align: center;
+  }
+}
+
+.footer-logo-link {
+  color: #ffffff;
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  @include media-tablet() {
+    margin-left: 61px;
+    margin-right: 89px;
+  }
+  @include media-desktop() {
+    margin-left: 118px;
+    margin-right: 217px;
+  }
+}
+
+.footer-soc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include media-tablet() {
+    flex-direction: row;
+    margin-right: 73px;
+    gap: 16px;
+  }
+
+  @include media-desktop() {
+    flex-direction: column;
+    margin-right: 281px;
+  }
+}
+
+.footer-soc-item {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.footer-cos-link {
+  display: flex;
+  fill: black;
+  align-items: center;
+  justify-content: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-item {
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.footer-link {
+  font-size: 16px;
+  line-height: 1.18;
+  text-transform: capitalize;
+  color: #8d9289;
+}
+
+.footer-list-link {
+  color: #ffffff;
+}
+
+.footer-title {
+  font-size: 16px;
+  line-height: 19px;
+  margin-bottom: 8px;
+}
+
+.footer-tel-item {
+  margin-bottom: 8px;
+}
+
+.footer-meil-item {
+  margin-bottom: 16px;
+}
