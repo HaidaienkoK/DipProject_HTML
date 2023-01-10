@@ -6,7 +6,6 @@ const optionsList = document.querySelectorAll(".option");
 
 selected.addEventListener("click", () => {
   optionsContainer.classList.toggle("active");
-  console.log('Привет это Первет')
 });
 
 optionsList.forEach(o => {

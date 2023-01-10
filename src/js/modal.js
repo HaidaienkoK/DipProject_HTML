@@ -5,6 +5,8 @@
     modal: document.querySelector('[data-modal]'),
     body: document.querySelector('body'),
   };
+  console.log('Modal block');
+    console.log(refs);
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
@@ -14,3 +16,4 @@
     refs.body.classList.toggle('no-scroll');
   }
 })();
+
