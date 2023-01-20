@@ -1,6 +1,7 @@
 <section class="to-main container-take-order">
   <h1 class="to-title">Take order</h1>
-  <div class="to-line">
+  <include src="./partials/lines.html"></include>
+  <!-- <div class="to-line">
     <div class="to-line-first">
       <div class="to-line-one"></div>
       <div class="to-line-two"></div>
@@ -9,7 +10,7 @@
       <div class="to-line-three"></div>
       <div class="to-line-four"></div>
     </div>
-  </div>
+  </div> -->
 
   <div class="to-product-info">
     <h2 class="to-name">Xiberia K9 PRO PC Headset</h2>
@@ -116,7 +117,7 @@
             </div>
             <!-- Select с выпадающим списком -->
             <div class="select-box">
-              <div class="options-container">
+              <div class="options-container" data-cont="1">
                 <div class="option">
                   <input type="radio" class="radio" id="BlackOrange" name="category" />
                   <label for="BlackOrange">K9D Black Orange</label>
@@ -132,11 +133,11 @@
                   <label for="WhiteBlue">K9U White Blue</label>
                 </div>
               </div>
-              <div class="selected">Color Option</div>
+              <div class="selected" data-selected="1">Color Option</div>
             </div>
 
             <div class="select-box">
-              <div class="options-container">
+              <div class="options-container" data-cont="2">
                 <div class="option">
                   <input type="radio" class="radio" id="One" name="category" />
                   <label for="One">1</label>
@@ -150,11 +151,11 @@
                   <label for="Three">3</label>
                 </div>
               </div>
-              <div class="selected">Quantity</div>
+              <div class="selected" data-selected="2">Quantity</div>
             </div>
 
             <div class="select-box">
-              <div class="options-container">
+              <div class="options-container" data-cont="3">
                 <div class="option">
                   <input type="radio" class="radio" id="NasterCard" name="category" />
                   <label for="NasterCard">Master Card</label>
@@ -164,7 +165,7 @@
                   <label for="GooglePay">Google Pay</label>
                 </div>
               </div>
-              <div class="selected">Payment</div>
+              <div class="selected" data-selected="3">Payment</div>
             </div>
             <!-- Select конец -->
           </div>

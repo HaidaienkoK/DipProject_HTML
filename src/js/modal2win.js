@@ -1,4 +1,5 @@
 const form = document.querySelector('.js-send-form');
+const body = document.querySelector('body');
 
 form.addEventListener('submit', onFormSubmit);
 
@@ -59,7 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
       /* После того как нашли нужное модальное окно, добавим классы
             подложке и окну чтобы показать их. */
       modalElem.classList.add('active');
-      overlay.classList.add('active');
+       overlay.classList.add('active');
+       body.classList.add('no-scroll');
     }); // end click
   }); // end foreach
 
@@ -68,7 +70,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var parentModal = this.closest('.modal');
 
       parentModal.classList.remove('active');
-      overlay.classList.remove('active');
+       overlay.classList.remove('active');
+       body.classList.remove('no-scroll');
     });
   }); // end foreach
 
@@ -79,14 +82,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (key == 27) {
         document.querySelector('.modal.active').classList.remove('active');
-        document.querySelector('.overlay').classList.remove('active');
+         document.querySelector('.overlay').classList.remove('active');
+         document.querySelector('.body').classList.remove('no-scroll');
       }
     },
     false
   );
 
   overlay.addEventListener('click', function () {
-    document.querySelector('.modal.active').classList.remove('active');
+     document.querySelector('.modal.active').classList.remove('active');
+     document.querySelector('body.no-scroll').classList.remove('no-scroll');
     this.classList.remove('active');
   });
 }); // end ready
